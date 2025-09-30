@@ -11,7 +11,7 @@ API_KEY = os.getenv("API_KEY")
 
 from elevenlabs.client import ElevenLabs
 from elevenlabs.conversational_ai.conversation import Conversation
-from elevenlabs.conversational_ai.conversations.audio import DefaultAudioInterface
+from elevenlabs.conversational_ai.default_audio_interface import DefaultAudioInterface
 from elevenlabs.conversational_ai.conversations.types import ConversationConfig
 
 conversation_override = {
@@ -38,3 +38,14 @@ conversation = Conversation(
     requires_auth=True,
     audio_interface=DefaultAudioInterface(),
 )
+
+def print_agent_resonse(response):
+    print(f"Agent: {response}")
+
+def print_interrupted_response(original, correct):
+    print(f"Agent interrupted, truncated response: {corrected}")
+
+def print_user_transcript(transcript):
+    print(f"User transcript: {transcript}")
+
+    
